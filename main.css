@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {/*cabeçalho*/
+    background-color: #5F27cd;/*cor de fundo*/
+    padding: 16px 0; /*espaçamento para (cima/baixo) (direito/esquerdo)*/
+    color: #fff;/*cor das fontes*/
+    display: flex;/*para o cabelho ficar com os elementos alinhados lado a lado*/
+    border-bottom: 16px solid #341f97;/*criação de uma borda p/ separar cabeçalho do conteúdo (separação,de linha solida e a cor)*/
+    justify-content: center;/*vai centralizar todo conteudo do cabeçalho no centro da página*/
+    text-transform: uppercase;/*para deixar o texto todo em maiúsculo*/
+    font-style: italic;/*para deixar a fonte italica*/
+}
+
+header button  {/*botão do cabeçalho*/
+    margin-left: 16px;/*almentar o espaçamento entre o botão e a letra*/
+}
+
+form {/*estrutura geral do formulário*/
+    background-color: #c8d6e5;/*cor de fundo*/
+    padding: 24px 0;/*espaçamento para (cima/baixo) (direito/esquerdo)*/
+    text-align: center;/*para alinhar todo o conteúdo no centro*/
+    display: none;
+}
+
+form h2{/*ajustando estilo apenas do h2*/
+    margin-bottom:  16px; /*almentar a margem de baixo*/
+}
+
+input, button {/*ajustando estilo no input e button*/
+    padding: 8px; /*criar um espaçamento dentro dos elementos*/
+}
+
+button {/*estilizando o botão*/
+    background-color: #009432;/*cor de fundo*/
+    border: none;/*retirar a borda*/
+    font-weight: bold;/*Fonte em negrito*/
+    text-transform: uppercase;/*para deixar o texto todo em maiúsculo*/
+    color: #fff;/*cor das fontes*/
+    cursor: pointer;/*cria uma interação no mouse, quando passar o cursor em cima do botão( fica um dedo apontado)*/
+}
+
+#botao-cancelar {/*(#) porque é um ID*/
+    background-color: red; /*cor de fundo*/
+} /*observação: para colocar o botão cancelar em vermelho temos que, criar uma ID para o mesmo */
+
+ul {/*estilizando o "ul"*/
+    display: flex; /*para os elementos ficarem um no lado do outro*/
+    flex-wrap: wrap;/*para quando o conteudo ocupar toda  alinha vá para a linha debaixo*/
+}
+
+ul li {/*estilizando o "ul li"*/
+    max-width: 25%;/*largura maxima de cada item tem que ser de 25%*/
+    list-style: none;/*remover o pontinho que esta na foto referente ao "li"*/
+    position: relative;/*para que a posição da figura não vase no lealt, e fique concentrado no elemento pai, vamos criar o 'posição relativa'*/
+    max-height: 280px;/*limitando a altura máxima*/
+    overflow-y: hidden;/*todo o conteúdo que ultrapassar este limite, o mesmo não poderar ser exibido*/
+}
+
+ul li img {/*estilizando o "ul li img"*/
+    width: 100%;/*informamos que a imagem tem que ficar com uma largura de 100% desta área*/
+}
+
+/*observação: a baixo criar uma classe para todas as "div s" */
+.overlay-imagem-link {/*estilizando toda classe overlay-imagem-link"*/
+    padding: 16px;/*espaçamento interno do elemento*/
+    background-color: rgba(0, 0, 0, 0.7);/*Cor de fundo */
+    position: absolute;/*colocar o elemento na parte inferior do "li"*/
+    bottom: 0;/*colocando na inferior da tela */
+    left: 0;/*colocando na parte esquerda */
+    width: 100%;/*informamos que a imagem tem que ficar com uma largura de 100% desta área*/
+    opacity: 0;/*opacidade que vai de 0 à 1 de maneira decimal - altera quando passar o mouse em cima aparecendo ou sumindo'*/
+    transition: all ease 0,5s;/*é a trasição do tempo de efeito de almentar a opacity ou diminuir*/
+}
+
+.overlay-imagem-link a {/*estilizando o elemento "A"*/
+    color: #fff;/*cor das fontes*/
+    text-decoration: none; /*para remover o underline do link*/
+}
+
+ul li:hover .overlay-imagem-link {/*estilizando o "ul li:houver, quando passar o mouse em cima"*/
+    opacity: 1;/*opacidade que vai de 0 à 1 de maneira decimal - altera quando passar o mouse em cima aparecendo ou sumindo'*/
+}
