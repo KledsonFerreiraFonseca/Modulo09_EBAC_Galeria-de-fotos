@@ -14,14 +14,14 @@ $(document).ready(function(){
         $(`<img src="${enderecoDaNovaImagem}"/>`).appendTo(novoItem)//para adicionar o elemento ao novo item
         $(`
             <div class="overlay-imagem-link">
-                <a herf="${enderecoDaNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
+                <a href="${enderecoDaNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
                     Ver imagem em tamanho real
                 </a>
             </div>
         `)
         .appendTo(novoItem)
         $(novoItem).appendTo('ul')
-        $(novoItem).fadeIn(1000)//efeito de aparecimento da imagem
+        $(novoItem).fadeIn(1000)//efeito de aparecimento da imagem (QUE SÃO 1000 SEGUNDOS)
         $('#endereco-imagem-nova').val('')// para limpar o campo
     })
 })
